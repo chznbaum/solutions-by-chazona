@@ -1,1 +1,5 @@
 <h2>Proposal List</h2>
+
+<section *ngFor="let proposal of proposals">
+  <p>{{ proposal.id }} - {{ proposal.client }} : {{ proposal.portfolio_url }}</p>
+</section>
