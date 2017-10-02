@@ -1,1 +1,17 @@
 <h2>Documents</h2>
+
+<section *ngFor="let doc of documents">
+  <h3>{{ doc.title }}</h3>
+  <p>
+    <em>{{ doc.description }}</em>
+  </p>
+  <p>
+    <a href="{{ doc.file_url }}">Download File</a>
+  </p>
+  <p>
+    {{ doc.updated_at }} | Client: {{ doc.client_id }}
+  </p>
+  <p>
+    {{ doc.image_url }}
+  </p>
+</section>
