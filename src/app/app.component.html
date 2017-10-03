@@ -1,10 +1,28 @@
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/documents">Docs</a>
-  <a routerLink="/proposals">Proposals</a>
+<nav class="navbar navbar-fixed-top navbar-light bg-light navbar-expand-sm">
+  <div class="container">
+    <a routerLink="/home" class="navbar-brand">Solutions by Chazona</a>
+    <button class="navbar-toggler"
+            type="button" (click)="isCollapsed = !isCollapsed"
+            aria-controls="primaryNav"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse" id="primaryNav">
+      <div class="navbar-nav">
+        <a routerLink="/home" class="nav-item nav-link" routerLinkActive="active">Home</a>
+        <a routerLink="/documents" class="nav-item nav-link" routerLinkActive="active">Documents</a>
+        <div ngbDropdown class="d-inline-block dropdown-links">
+          <button class="btn btn-outline-primary" id="proposalsMenu" ngbDropdownToggle>Proposals</button>
+          <div ngbDropdownMenu aria-labelledby="proposalsMenu">
+            <a routerLink="/proposals" class="dropdown-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Proposal List</a>
+            <a routerLink="/proposals/new" class="dropdown-item" routerLinkActive="active">New Proposal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
-<h1>
-  {{title}}
-</h1>
 
 <router-outlet></router-outlet>
