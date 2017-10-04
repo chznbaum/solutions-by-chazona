@@ -2,7 +2,7 @@ export class Proposal {
   constructor(
     public id?: number,
     public client?: string,
-    public portfolio_url: string = 'http://',
+    public portfolio_url: string = 'https://',
     public tools?: string,
     public estimated_hours?: number,
     public hourly_rate?: number,

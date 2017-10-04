@@ -5,7 +5,7 @@ import { Proposal } from './proposal';
   moduleId: module.id,
   selector: 'proposal-list',
   templateUrl: './proposal-list.component.html',
-  styleUrls: ['./proposal-list.component.css']
+  styleUrls: ['./proposal-list.component.scss']
 })
 export class ProposalListComponent {
   proposalOne: Proposal = new Proposal(15,'ABC Company', 'https://sampleportfolio.com', 'ABC Technology', 150, 120, 15, 'abccompany@example.com')

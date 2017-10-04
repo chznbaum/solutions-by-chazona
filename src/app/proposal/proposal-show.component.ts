@@ -6,7 +6,7 @@ import { Proposal } from './proposal';
   moduleId: module.id,
   selector: 'proposal-show',
   templateUrl: './proposal-show.component.html',
-  styleUrls: ['./proposal-show.component.css']
+  styleUrls: ['./proposal-show.component.scss']
 })
 export class ProposalShowComponent implements OnInit {
   id: number;

@@ -5,7 +5,7 @@ import { Proposal } from './proposal';
   moduleId: module.id,
   selector: 'proposal-new',
   templateUrl: './proposal-new.component.html',
-  styleUrls: ['./proposal-new.component.css']
+  styleUrls: ['./proposal-new.component.scss']
 })
 export class ProposalNewComponent{
   proposal = new Proposal;

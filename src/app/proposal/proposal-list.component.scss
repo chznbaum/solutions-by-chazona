@@ -1,0 +1,13 @@
+@import "~/../node_modules/bootstrap/scss/_functions";
+
+@import "~/../node_modules/bootstrap/scss/_variables";
+
+h1 {
+  color: $white;
+}
+
+.list-group-item {
+  a:hover {
+    text-decoration: none;
+  }
+}

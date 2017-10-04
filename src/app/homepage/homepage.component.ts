@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {}
