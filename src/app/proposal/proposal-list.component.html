@@ -5,7 +5,7 @@
       <h1>Proposal List</h1>
     </a>
     <span *ngFor="let proposal of proposals" class="list-group-item list-group-item-action">
-      <a routerLink="/proposal/{{ proposal.id }}">
+      <a (click)="goToShow(proposal)">
         <h2 class="h4 list-group-item-heading">{{ proposal.client }}</h2>
         <p class="list-group-item-text">
           {{ proposal.hourly_rate * proposal.estimated_hours | currency:'USD':true:'.0' }}

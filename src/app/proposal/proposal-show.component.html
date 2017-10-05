@@ -1,8 +1,21 @@
 <div class="container">
   <div class="card">
     <div class="card-body">
-      <h1 class="card-title">Show Proposal</h1>
-      <p class="card-text">The id for this proposal is: {{ id }}.</p>
+      <h1 class="card-title">{{ proposal.client }}</h1>
+
+      <p class="card-text">Hi {{ proposal.client }},</p>
+
+      <p class="card-text">It was a pleasure getting to meet with you and review your project requirements. I believe it is a great fit for the types of applications that I build out. Please feel free to check out some of my past projects <a href="{{ proposal.portfolio_url }}">here</a>.</p>
+
+      <p class="card-text">To successfully build out the application I will be utilizing {{ proposal.tools }}, and a number of other tools to ensure that the project follows industry-wide best practices.</p>
+
+      <p class="card-text">Ensuring that you are fully informed is one of my top priorities, so in addition to incorporating everything that we discussed, I wil also be creating a project management dashboard and sending you a project update message daily so that you can have a transparent view of the development as it takes place.</p>
+
+      <p class="card-text">To accomplish the project and meet the requirements that we discussed, I am estimating that it will take {{ proposal.estimated_hours }} hours in development time to complete. The project should take {{ proposal.weeks_to_complete }} weeks to complete and with my hourly rate of {{ proposal.hourly_rate | currency:'USD':true:'.0' }}, the estimated total will be {{ proposal.hourly_rate * proposal.estimated_hours | currency:'USD':true:'.0' }}.</p>
+
+      <p class="card-text">The next step from here is to set up a meeting to finalize the project and sign contracts.</p>
+
+      <p class="card-text">I am excited to work with you and build out this project!</p>
     </div>
   </div>
 </div>

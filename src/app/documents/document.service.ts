@@ -12,7 +12,7 @@ export class DocumentService {
     private http: Http
   ) {}
 
-  getDocument(): Observable<Document[]> {
+  getDocuments(): Observable<Document[]> {
     return this.http.get(this.documentsUrl)
                     .map((response: Response) => <Document[]>response.json())
                     .catch(this.handleError);

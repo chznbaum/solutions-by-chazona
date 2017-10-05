@@ -21,11 +21,11 @@ export class DocumentsComponent implements OnInit {
 
   ngOnInit() {
     let timer = Observable.timer(0, 5000);
-    timer.subscribe(()=> this.getDocuments());
+    timer.subscribe(() => this.getDocuments());
   }
 
   getDocuments() {
-    this.documentService.getDocument()
+    this.documentService.getDocuments()
         .subscribe(
           documents => this.documents = documents,
           error => this.errorMessage = <any>error
