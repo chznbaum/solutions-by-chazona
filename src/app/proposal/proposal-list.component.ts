@@ -6,7 +6,7 @@ import { ProposalService } from './proposal.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'proposal-list',
+  selector: 'app-proposal-list',
   templateUrl: './proposal-list.component.html',
   styleUrls: ['./proposal-list.component.scss'],
   providers: [ ProposalService ]
@@ -14,7 +14,7 @@ import { ProposalService } from './proposal.service';
 export class ProposalListComponent implements OnInit {
   proposals: Proposal[];
   errorMessage: string;
-  mode = "Observable";
+  mode = 'Observable';
 
   constructor(
     private proposalService: ProposalService,
@@ -22,7 +22,7 @@ export class ProposalListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    let timer = Observable.timer(0, 5000);
+    const timer = Observable.timer(0, 5000);
     timer.subscribe(() => this.getProposals());
   }
 
@@ -35,7 +35,7 @@ export class ProposalListComponent implements OnInit {
   }
 
   goToShow(proposal: Proposal): void {
-    let link = ['/proposal', proposal.id];
+    const link = ['/proposal', proposal.id];
     this.router.navigate(link);
   }
 }

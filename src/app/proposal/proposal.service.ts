@@ -23,8 +23,8 @@ export class ProposalService {
   }
 
   createProposal(proposal) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
     return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers })
                     .map((response: Response) => response.json());
   }
@@ -32,7 +32,7 @@ export class ProposalService {
   private handleError (error: Response | any) {
     let errMsg: string;
     if (error instanceof Response) {
-      const body = error.json() || "";
+      const body = error.json() || '';
       const err = body.error || JSON.stringify(body);
       errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
     } else {

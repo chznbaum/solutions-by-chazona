@@ -7,7 +7,7 @@ import { ProposalService } from './proposal.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'proposal-show',
+  selector: 'app-proposal-show',
   templateUrl: './proposal-show.component.html',
   styleUrls: ['./proposal-show.component.scss'],
   providers: [ ProposalService ]
@@ -23,7 +23,7 @@ export class ProposalShowComponent implements OnInit {
   proposal: Proposal;
 
   ngOnInit(): void {
-    let proposalRequest = this.route.params
+    const proposalRequest = this.route.params
         .flatMap((params: Params) =>
           this.proposalService.getProposal(+params['id']));
     proposalRequest.subscribe(response => this.proposal = response.json());

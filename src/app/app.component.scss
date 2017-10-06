@@ -1,17 +1,16 @@
-@import "~/../node_modules/bootstrap/scss/_functions";
-
-@import "~/../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
 
 main {
   margin-top: 70px;
 }
 
 a.nav-link {
-  color: $white!important;
+  color: white!important;
 }
 
 a.nav-link:hover, a.nav-link:focus {
-  color: darken($white, 15%)!important;
+  color: darken(white, 15%)!important;
 }
 
 a.nav-link.active {

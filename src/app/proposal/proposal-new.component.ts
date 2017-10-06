@@ -5,14 +5,14 @@ import { ProposalService } from './proposal.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'proposal-new',
+  selector: 'app-proposal-new',
   templateUrl: './proposal-new.component.html',
   styleUrls: ['./proposal-new.component.scss'],
   providers: [ ProposalService ]
 })
-export class ProposalNewComponent{
+export class ProposalNewComponent {
   proposal = new Proposal;
-  submitted: boolean = false;
+  submitted = false;
 
   constructor(
     private proposalService: ProposalService
@@ -22,11 +22,11 @@ export class ProposalNewComponent{
     this.submitted = true;
     this.proposalService.createProposal(proposal)
         .subscribe(
-          data => { return true },
+          data => true,
           error => {
-            console.log("Error saving proposal.");
+            console.log('Error saving proposal.');
             return Observable.throw(error);
           }
-        )
+        );
   }
 }

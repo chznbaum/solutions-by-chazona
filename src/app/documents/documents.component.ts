@@ -5,7 +5,7 @@ import { DocumentService } from './document.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'documents',
+  selector: 'app-documents',
   templateUrl: './documents.component.html',
   styleUrls: ['./documents.component.scss'],
   providers: [ DocumentService ]
@@ -13,14 +13,14 @@ import { DocumentService } from './document.service';
 export class DocumentsComponent implements OnInit {
   documents: Document[];
   errorMessage: string;
-  mode = "Observable";
+  mode = 'Observable';
 
   constructor(
     private documentService: DocumentService
   ) {}
 
   ngOnInit() {
-    let timer = Observable.timer(0, 5000);
+    const timer = Observable.timer(0, 5000);
     timer.subscribe(() => this.getDocuments());
   }
 
@@ -30,5 +30,5 @@ export class DocumentsComponent implements OnInit {
           documents => this.documents = documents,
           error => this.errorMessage = <any>error
         );
-  };
+  }
 }

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'proposals', component: ProposalListComponent },
   { path: 'proposals/new', component: ProposalNewComponent },
   { path: 'proposal/:id', component: ProposalShowComponent }
-]
+];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
